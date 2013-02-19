@@ -1,0 +1,8 @@
+
+2013-02-19
+------------
+- Initial commit
+- Code has been used for single CiviContribute payments via
+  WorldPay
+- Some code exists for FuturePay support, but this
+  functionality has not been tested and may or may not work.
