@@ -166,6 +166,9 @@ class CRM_Core_Payment_WorldPay extends CRM_Core_Payment {
         $fields["intervalUnit"]=$repeatUnit;
         $fields["intervalMult"]=$params["frequency_interval"];
         $fields["normalAmount"]=$params["amount_other"];// same as 1st
+        if ($params["normalAmount"]=='') {
+			$fields["normalAmount"]=$params["amount"];// this is where it's taken from the membership amount.'
+		}
         $fields["noOfPayments"]=$noPayments;// -1 to remove 1st ?
         $fields["amount"]=$params["amount_other"];//
         $fields["startDate"]=date("Y-m-d",$tomorrow);
